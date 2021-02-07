@@ -3,23 +3,29 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package higherorlower;
+package casinoGame;
 
 import java.awt.Toolkit;
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
  *
  * @author mr200179
  */
-public class playingBoard extends javax.swing.JFrame {
-public int cardValue=0;
-public int newValue=0;
+public class higherorlower extends javax.swing.JFrame {
+private int cardValue=0;
+private int newValue=0;
+private int inARow=0;
+public ArrayList<Authentication> UserList = new ArrayList<>();
     /**
      * Creates new form playingBoard
      */
-    public playingBoard() {
+    public higherorlower() {
         initComponents();
+          UserList = FileHandling.readFile();
+        LogInSystem index = new LogInSystem();
+        jLabel4.setText("Coins: "+UserList.get(index.getCurrentUName()).getCurrency());
         c10.setVisible(false);
         c2.setVisible(false);
         c3.setVisible(false);
@@ -49,7 +55,6 @@ public int newValue=0;
         jButton2 = new javax.swing.JButton();
         cj = new javax.swing.JLabel();
         c2 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         c3 = new javax.swing.JLabel();
         c4 = new javax.swing.JLabel();
         c5 = new javax.swing.JLabel();
@@ -63,12 +68,14 @@ public int newValue=0;
         cq = new javax.swing.JLabel();
         higher = new javax.swing.JButton();
         lower = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/higherorlower/red-start-png-5.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/casinoGame/red-start-png-5.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -77,59 +84,55 @@ public int newValue=0;
         getContentPane().add(jButton2);
         jButton2.setBounds(820, 410, 320, 300);
 
-        cj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/higherorlower/JH.png"))); // NOI18N
+        cj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/casinoGame/JH.png"))); // NOI18N
         getContentPane().add(cj);
         cj.setBounds(680, 390, 790, 1070);
 
-        c2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/higherorlower/2C.png"))); // NOI18N
+        c2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/casinoGame/2C.png"))); // NOI18N
         getContentPane().add(c2);
         c2.setBounds(680, 310, 1160, 1240);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/higherorlower/casino.gif"))); // NOI18N
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(430, 0, 510, 250);
-
-        c3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/higherorlower/3H.png"))); // NOI18N
+        c3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/casinoGame/3H.png"))); // NOI18N
         getContentPane().add(c3);
         c3.setBounds(680, 390, 1140, 1080);
 
-        c4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/higherorlower/4D.png"))); // NOI18N
+        c4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/casinoGame/4D.png"))); // NOI18N
         getContentPane().add(c4);
         c4.setBounds(680, 380, 1040, 1090);
 
-        c5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/higherorlower/5S.png"))); // NOI18N
+        c5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/casinoGame/5S.png"))); // NOI18N
         getContentPane().add(c5);
         c5.setBounds(680, 390, 830, 1080);
 
-        c6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/higherorlower/6C.png"))); // NOI18N
+        c6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/casinoGame/6C.png"))); // NOI18N
         getContentPane().add(c6);
         c6.setBounds(680, 390, 840, 1070);
 
-        c7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/higherorlower/7D.png"))); // NOI18N
+        c7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/casinoGame/7D.png"))); // NOI18N
         getContentPane().add(c7);
         c7.setBounds(680, 380, 820, 1090);
 
-        c8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/higherorlower/8H.png"))); // NOI18N
+        c8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/casinoGame/8H.png"))); // NOI18N
         getContentPane().add(c8);
         c8.setBounds(680, 380, 1060, 1090);
 
-        c9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/higherorlower/9S.png"))); // NOI18N
+        c9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/casinoGame/9S.png"))); // NOI18N
         getContentPane().add(c9);
         c9.setBounds(680, 370, 1140, 1110);
 
-        c10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/higherorlower/10C.png"))); // NOI18N
+        c10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/casinoGame/10C.png"))); // NOI18N
         getContentPane().add(c10);
         c10.setBounds(680, 390, 750, 1080);
 
-        ca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/higherorlower/AD.png"))); // NOI18N
+        ca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/casinoGame/AD.png"))); // NOI18N
         getContentPane().add(ca);
         ca.setBounds(680, 370, 830, 1120);
 
-        ck.setIcon(new javax.swing.ImageIcon(getClass().getResource("/higherorlower/KS.png"))); // NOI18N
+        ck.setIcon(new javax.swing.ImageIcon(getClass().getResource("/casinoGame/KS.png"))); // NOI18N
         getContentPane().add(ck);
         ck.setBounds(680, 390, 1100, 1070);
 
-        cq.setIcon(new javax.swing.ImageIcon(getClass().getResource("/higherorlower/QC.png"))); // NOI18N
+        cq.setIcon(new javax.swing.ImageIcon(getClass().getResource("/casinoGame/QC.png"))); // NOI18N
         getContentPane().add(cq);
         cq.setBounds(680, 400, 691, 1056);
 
@@ -153,13 +156,48 @@ public int newValue=0;
         getContentPane().add(lower);
         lower.setBounds(360, 490, 160, 60);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/higherorlower/back.png"))); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Niagara Solid", 0, 48)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(110, 60, 600, 120);
+
+        jLabel3.setFont(new java.awt.Font("Niagara Solid", 0, 48)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("For every one you get right win 50 coins, get one wrong and lose 100");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(640, 230, 840, 60);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/casinoGame/backdrop.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(10, 0, 2000, 1090);
+        jLabel1.setBounds(-20, -220, 2450, 1450);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+private void isUserBankrupt(){
+    LogInSystem useraccount = new LogInSystem();
+     if ((UserList.get(useraccount.getCurrentUName()).getCurrency()) <= 0) {
+                UserList.remove((useraccount.getCurrentUName()));
+                FileHandling.writeFile(UserList);
+                insufficientFunds start = new insufficientFunds();
+                Toolkit tk = Toolkit.getDefaultToolkit();
+                int width = (int) tk.getScreenSize().getWidth();
+                int height = (int) tk.getScreenSize().getHeight();
 
+                start.setSize(width, height);
+                start.setVisible(true);
+                this.dispose();
+
+            }else{
+             NewJFrame start = new NewJFrame(); 
+        Toolkit tk = Toolkit.getDefaultToolkit();
+        int width =(int) tk.getScreenSize().getWidth();
+         int height =(int) tk.getScreenSize().getHeight();
+
+        start.setSize(width,height);
+        start.setVisible(true);
+        this.dispose();
+     }
+}
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        Random rand= new Random();
        int cardNum=rand.nextInt((13 - 2) + 1) + 2;
@@ -277,17 +315,26 @@ public int newValue=0;
         jButton2.setVisible(false);
         higher.setVisible(true);
         lower.setVisible(true);
+        LogInSystem useraccount = new LogInSystem();
+        int newCoins;
         if (cardValue>newValue){
             
+          newCoins =UserList.get(useraccount.getCurrentUName()).getCurrency()+50;
+            jLabel4.setText(""+newCoins);
+            UserList.get(useraccount.getCurrentUName()).setCurrency(newCoins);
+            FileHandling.writeFile(UserList);
         }else{
-            NewJFrame start = new NewJFrame(); 
-        Toolkit tk = Toolkit.getDefaultToolkit();
-        int width =(int) tk.getScreenSize().getWidth();
-         int height =(int) tk.getScreenSize().getHeight();
-
-        start.setSize(width,height);
-        start.setVisible(true);
-        this.dispose();
+            newCoins =UserList.get(useraccount.getCurrentUName()).getCurrency()-100;
+            jLabel4.setText(""+newCoins);
+            UserList.get(useraccount.getCurrentUName()).setCurrency(newCoins);
+            FileHandling.writeFile(UserList);
+           
+            isUserBankrupt();
+            
+            
+            
+        
+        
         }
     }//GEN-LAST:event_higherActionPerformed
 
@@ -358,17 +405,22 @@ public int newValue=0;
         jButton2.setVisible(false);
         higher.setVisible(true);
         lower.setVisible(true);
+        LogInSystem useraccount = new LogInSystem();
+        int newCoins;
         if (cardValue<newValue){
-            
+             newCoins =UserList.get(useraccount.getCurrentUName()).getCurrency()+50;
+            jLabel4.setText(""+newCoins);
+            UserList.get(useraccount.getCurrentUName()).setCurrency(newCoins);
+            FileHandling.writeFile(UserList);
         }else{
-            NewJFrame start = new NewJFrame(); 
-        Toolkit tk = Toolkit.getDefaultToolkit();
-        int width =(int) tk.getScreenSize().getWidth();
-         int height =(int) tk.getScreenSize().getHeight();
-
-        start.setSize(width,height);
-        start.setVisible(true);
-        this.dispose();
+            newCoins =UserList.get(useraccount.getCurrentUName()).getCurrency()-100;
+            jLabel4.setText(""+newCoins);
+            UserList.get(useraccount.getCurrentUName()).setCurrency(newCoins);
+            FileHandling.writeFile(UserList);
+            isUserBankrupt();
+             
+      
+        
         }
     }//GEN-LAST:event_lowerActionPerformed
 
@@ -389,20 +441,21 @@ public int newValue=0;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(playingBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(higherorlower.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(playingBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(higherorlower.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(playingBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(higherorlower.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(playingBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(higherorlower.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new playingBoard().setVisible(true);
+                new higherorlower().setVisible(true);
             }
         });
     }
@@ -424,7 +477,8 @@ public int newValue=0;
     private javax.swing.JButton higher;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JButton lower;
     // End of variables declaration//GEN-END:variables
 }

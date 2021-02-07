@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package higherorlower;
+package casinoGame;
 
 import java.awt.Toolkit;
 
@@ -11,12 +11,12 @@ import java.awt.Toolkit;
  *
  * @author maxra
  */
-public class NewJFrame extends javax.swing.JFrame {
+public class insufficientFunds extends javax.swing.JFrame {
 
     /**
-     * Creates new form NewJFrame
+     * Creates new form insufficientFunds
      */
-    public NewJFrame() {
+    public insufficientFunds() {
         initComponents();
     }
 
@@ -29,37 +29,45 @@ public class NewJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/higherorlower/gameOver.png"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(430, -270, 1080, 1050);
-
-        jButton1.setFont(new java.awt.Font("Niagara Solid", 0, 155)); // NOI18N
-        jButton1.setText("try again");
+        jButton1.setFont(new java.awt.Font("Niagara Solid", 0, 24)); // NOI18N
+        jButton1.setText("Return to start screen");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(740, 500, 460, 247);
+        jButton1.setBounds(780, 400, 190, 50);
+
+        jLabel2.setFont(new java.awt.Font("Niagara Solid", 0, 75)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("You ran out of money and this has lead to the termination of your account");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(300, 80, 1410, 200);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/casinoGame/backdrop.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, -50, 2549, 1103);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        playingBoard start = new playingBoard(); 
+         LogInSystem start = new LogInSystem();
         Toolkit tk = Toolkit.getDefaultToolkit();
-        int width =(int) tk.getScreenSize().getWidth();
-         int height =(int) tk.getScreenSize().getHeight();
+        int width = (int) tk.getScreenSize().getWidth();
+        int height = (int) tk.getScreenSize().getHeight();
 
-        start.setSize(width,height);
+        start.setSize(width, height);
         start.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -79,20 +87,20 @@ public class NewJFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(insufficientFunds.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(insufficientFunds.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(insufficientFunds.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(insufficientFunds.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NewJFrame().setVisible(true);
+                new insufficientFunds().setVisible(true);
             }
         });
     }
@@ -100,5 +108,6 @@ public class NewJFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

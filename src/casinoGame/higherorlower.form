@@ -28,7 +28,7 @@
     <Component class="javax.swing.JButton" name="jButton2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/higherorlower/red-start-png-5.png"/>
+          <Image iconType="3" name="/casinoGame/red-start-png-5.png"/>
         </Property>
       </Properties>
       <Events>
@@ -43,7 +43,7 @@
     <Component class="javax.swing.JLabel" name="cj">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/higherorlower/JH.png"/>
+          <Image iconType="3" name="/casinoGame/JH.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -55,7 +55,7 @@
     <Component class="javax.swing.JLabel" name="c2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/higherorlower/2C.png"/>
+          <Image iconType="3" name="/casinoGame/2C.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -64,22 +64,10 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/higherorlower/casino.gif"/>
-        </Property>
-      </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="430" y="0" width="510" height="250"/>
-        </Constraint>
-      </Constraints>
-    </Component>
     <Component class="javax.swing.JLabel" name="c3">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/higherorlower/3H.png"/>
+          <Image iconType="3" name="/casinoGame/3H.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -91,7 +79,7 @@
     <Component class="javax.swing.JLabel" name="c4">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/higherorlower/4D.png"/>
+          <Image iconType="3" name="/casinoGame/4D.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -103,7 +91,7 @@
     <Component class="javax.swing.JLabel" name="c5">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/higherorlower/5S.png"/>
+          <Image iconType="3" name="/casinoGame/5S.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -115,7 +103,7 @@
     <Component class="javax.swing.JLabel" name="c6">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/higherorlower/6C.png"/>
+          <Image iconType="3" name="/casinoGame/6C.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -127,7 +115,7 @@
     <Component class="javax.swing.JLabel" name="c7">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/higherorlower/7D.png"/>
+          <Image iconType="3" name="/casinoGame/7D.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -139,7 +127,7 @@
     <Component class="javax.swing.JLabel" name="c8">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/higherorlower/8H.png"/>
+          <Image iconType="3" name="/casinoGame/8H.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -151,7 +139,7 @@
     <Component class="javax.swing.JLabel" name="c9">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/higherorlower/9S.png"/>
+          <Image iconType="3" name="/casinoGame/9S.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -163,7 +151,7 @@
     <Component class="javax.swing.JLabel" name="c10">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/higherorlower/10C.png"/>
+          <Image iconType="3" name="/casinoGame/10C.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -175,7 +163,7 @@
     <Component class="javax.swing.JLabel" name="ca">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/higherorlower/AD.png"/>
+          <Image iconType="3" name="/casinoGame/AD.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -187,7 +175,7 @@
     <Component class="javax.swing.JLabel" name="ck">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/higherorlower/KS.png"/>
+          <Image iconType="3" name="/casinoGame/KS.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -199,7 +187,7 @@
     <Component class="javax.swing.JLabel" name="cq">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/higherorlower/QC.png"/>
+          <Image iconType="3" name="/casinoGame/QC.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -240,15 +228,46 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/higherorlower/back.png"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Niagara Solid" size="48" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="10" y="0" width="2000" height="1090"/>
+          <AbsoluteConstraints x="110" y="60" width="600" height="120"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Niagara Solid" size="48" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="For every one you get right win 50 coins, get one wrong and lose 100"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="640" y="230" width="840" height="60"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/casinoGame/backdrop.jpg"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="-20" y="-220" width="2450" height="1450"/>
         </Constraint>
       </Constraints>
     </Component>
